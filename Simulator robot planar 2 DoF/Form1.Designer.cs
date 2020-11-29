@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, "0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, "0,0");
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, "0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, "0,0");
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -50,25 +50,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.knobteta2 = new KnobControl.KnobControl();
             this.button1 = new System.Windows.Forms.Button();
+            this.knobteta1 = new KnobControl.KnobControl();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.knobControl2 = new KnobControl.KnobControl();
+            this.knobControl1 = new KnobControl.KnobControl();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.knobteta1 = new KnobControl.KnobControl();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.knobteta2 = new KnobControl.KnobControl();
             this.label16 = new System.Windows.Forms.Label();
-            this.knobControl1 = new KnobControl.KnobControl();
-            this.knobControl2 = new KnobControl.KnobControl();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -133,7 +133,7 @@
             this.panel4.CausesValidation = false;
             this.panel4.Controls.Add(this.checkBox1);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(162, 454);
+            this.panel4.Location = new System.Drawing.Point(162, 513);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(220, 39);
             this.panel4.TabIndex = 0;
@@ -155,7 +155,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 11);
+            this.label10.Location = new System.Drawing.Point(3, 10);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 15);
             this.label10.TabIndex = 1;
@@ -165,71 +165,72 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.chart1.BorderlineColor = System.Drawing.Color.Black;
-            chartArea2.AxisX.Interval = 1D;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Arial", 12F);
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LineWidth = 3;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea2.AxisX.MajorGrid.LineWidth = 2;
-            chartArea2.AxisX.Maximum = 8D;
-            chartArea2.AxisX.Minimum = -8D;
-            chartArea2.AxisX.MinorGrid.Interval = 0.5D;
-            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.MidnightBlue;
-            chartArea2.AxisX.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
-            chartArea2.AxisX.Title = "X";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.Interval = 1D;
-            chartArea2.AxisY.IsLabelAutoFit = false;
-            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Arial", 12F);
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineWidth = 3;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            chartArea2.AxisY.MajorGrid.LineWidth = 2;
-            chartArea2.AxisY.Maximum = 8D;
-            chartArea2.AxisY.Minimum = -8D;
-            chartArea2.AxisY.MinorGrid.Interval = 0.1D;
-            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            chartArea2.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
-            chartArea2.AxisY.Title = "Y";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea2.BackColor = System.Drawing.Color.DarkGray;
-            chartArea2.BorderColor = System.Drawing.Color.DimGray;
-            chartArea2.Name = "ChartArea1";
-            chartArea2.ShadowColor = System.Drawing.Color.Black;
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Arial", 12F);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineWidth = 3;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisX.MajorGrid.LineWidth = 2;
+            chartArea1.AxisX.Maximum = 8D;
+            chartArea1.AxisX.Minimum = -8D;
+            chartArea1.AxisX.MinorGrid.Interval = 0.5D;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.MidnightBlue;
+            chartArea1.AxisX.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea1.AxisX.Title = "X";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.Interval = 1D;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Arial", 12F);
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineWidth = 3;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            chartArea1.AxisY.MajorGrid.LineWidth = 2;
+            chartArea1.AxisY.Maximum = 8D;
+            chartArea1.AxisY.Minimum = -8D;
+            chartArea1.AxisY.MinorGrid.Interval = 0.1D;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea1.AxisY.Title = "Y";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.DarkGray;
+            chartArea1.BorderColor = System.Drawing.Color.DimGray;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.ShadowColor = System.Drawing.Color.Black;
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(162, 6);
             this.chart1.Name = "chart1";
-            series3.BorderWidth = 10;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.Yellow;
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Name = "Series1";
-            series3.Points.Add(dataPoint7);
-            series3.Points.Add(dataPoint8);
-            series3.Points.Add(dataPoint9);
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series4.BorderWidth = 15;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series4.Color = System.Drawing.Color.Red;
-            series4.Name = "Series2";
-            series4.Points.Add(dataPoint10);
-            series4.Points.Add(dataPoint11);
-            series4.Points.Add(dataPoint12);
-            series4.YValuesPerPoint = 2;
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(571, 487);
+            series1.BorderWidth = 10;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Yellow;
+            series1.IsVisibleInLegend = false;
+            series1.Name = "Series1";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series2.BorderWidth = 15;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Name = "Series2";
+            series2.Points.Add(dataPoint4);
+            series2.Points.Add(dataPoint5);
+            series2.Points.Add(dataPoint6);
+            series2.YValuesPerPoint = 2;
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(549, 549);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
+            this.chart1.Paint += new System.Windows.Forms.PaintEventHandler(this.Form_Paint);
             // 
             // textBox2
             // 
@@ -314,6 +315,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sudut Lengan";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(55, 325);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Teta 2";
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(74, 59);
@@ -322,6 +334,17 @@
             this.textBox4.TabIndex = 15;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(55, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 15);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Teta 1";
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(74, 22);
@@ -329,6 +352,32 @@
             this.textBox3.Size = new System.Drawing.Size(70, 21);
             this.textBox3.TabIndex = 10;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // knobteta2
+            // 
+            this.knobteta2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.knobteta2.EndAngle = 405F;
+            this.knobteta2.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.knobteta2.KnobBackColor = System.Drawing.Color.White;
+            this.knobteta2.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
+            this.knobteta2.LargeChange = 5;
+            this.knobteta2.Location = new System.Drawing.Point(13, 217);
+            this.knobteta2.Maximum = 360;
+            this.knobteta2.Minimum = -360;
+            this.knobteta2.Name = "knobteta2";
+            this.knobteta2.PointerColor = System.Drawing.Color.SlateBlue;
+            this.knobteta2.ScaleColor = System.Drawing.Color.Black;
+            this.knobteta2.ScaleDivisions = 11;
+            this.knobteta2.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.knobteta2.ScaleSubDivisions = 4;
+            this.knobteta2.ShowLargeScale = true;
+            this.knobteta2.ShowSmallScale = false;
+            this.knobteta2.Size = new System.Drawing.Size(123, 123);
+            this.knobteta2.SmallChange = 1;
+            this.knobteta2.StartAngle = 135F;
+            this.knobteta2.TabIndex = 9;
+            this.knobteta2.Value = 0;
+            this.knobteta2.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobteta2_ValueChanged);
             // 
             // button1
             // 
@@ -340,6 +389,32 @@
             this.button1.Text = "FORWARD";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // knobteta1
+            // 
+            this.knobteta1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.knobteta1.EndAngle = 405F;
+            this.knobteta1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.knobteta1.KnobBackColor = System.Drawing.Color.White;
+            this.knobteta1.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
+            this.knobteta1.LargeChange = 5;
+            this.knobteta1.Location = new System.Drawing.Point(14, 89);
+            this.knobteta1.Maximum = 360;
+            this.knobteta1.Minimum = -360;
+            this.knobteta1.Name = "knobteta1";
+            this.knobteta1.PointerColor = System.Drawing.Color.SlateBlue;
+            this.knobteta1.ScaleColor = System.Drawing.Color.Black;
+            this.knobteta1.ScaleDivisions = 11;
+            this.knobteta1.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.knobteta1.ScaleSubDivisions = 4;
+            this.knobteta1.ShowLargeScale = true;
+            this.knobteta1.ShowSmallScale = false;
+            this.knobteta1.Size = new System.Drawing.Size(122, 122);
+            this.knobteta1.SmallChange = 1;
+            this.knobteta1.StartAngle = 135F;
+            this.knobteta1.TabIndex = 8;
+            this.knobteta1.Value = 0;
+            this.knobteta1.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobteta1_ValueChanged);
             // 
             // label4
             // 
@@ -383,12 +458,86 @@
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox3.Location = new System.Drawing.Point(739, 6);
+            this.groupBox3.Location = new System.Drawing.Point(717, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(152, 408);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Posisi End Of Effector";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label11.Location = new System.Drawing.Point(50, 334);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 15);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Posisi Y";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label9.Location = new System.Drawing.Point(50, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 15);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Posisi X";
+            // 
+            // knobControl2
+            // 
+            this.knobControl2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.knobControl2.EndAngle = 405F;
+            this.knobControl2.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.knobControl2.KnobBackColor = System.Drawing.Color.White;
+            this.knobControl2.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
+            this.knobControl2.LargeChange = 5;
+            this.knobControl2.Location = new System.Drawing.Point(16, 226);
+            this.knobControl2.Maximum = 7;
+            this.knobControl2.Minimum = -7;
+            this.knobControl2.Name = "knobControl2";
+            this.knobControl2.PointerColor = System.Drawing.Color.SlateBlue;
+            this.knobControl2.ScaleColor = System.Drawing.Color.Black;
+            this.knobControl2.ScaleDivisions = 15;
+            this.knobControl2.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.knobControl2.ScaleSubDivisions = 4;
+            this.knobControl2.ShowLargeScale = true;
+            this.knobControl2.ShowSmallScale = false;
+            this.knobControl2.Size = new System.Drawing.Size(123, 123);
+            this.knobControl2.SmallChange = 1;
+            this.knobControl2.StartAngle = 135F;
+            this.knobControl2.TabIndex = 17;
+            this.knobControl2.Value = 0;
+            this.knobControl2.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobControl2_ValueChanged);
+            // 
+            // knobControl1
+            // 
+            this.knobControl1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.knobControl1.EndAngle = 405F;
+            this.knobControl1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.knobControl1.KnobBackColor = System.Drawing.Color.White;
+            this.knobControl1.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
+            this.knobControl1.LargeChange = 5;
+            this.knobControl1.Location = new System.Drawing.Point(16, 88);
+            this.knobControl1.Maximum = 7;
+            this.knobControl1.Minimum = -7;
+            this.knobControl1.Name = "knobControl1";
+            this.knobControl1.PointerColor = System.Drawing.Color.SlateBlue;
+            this.knobControl1.ScaleColor = System.Drawing.Color.Black;
+            this.knobControl1.ScaleDivisions = 15;
+            this.knobControl1.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.knobControl1.ScaleSubDivisions = 4;
+            this.knobControl1.ShowLargeScale = true;
+            this.knobControl1.ShowSmallScale = false;
+            this.knobControl1.Size = new System.Drawing.Size(123, 123);
+            this.knobControl1.SmallChange = 1;
+            this.knobControl1.StartAngle = 135F;
+            this.knobControl1.TabIndex = 16;
+            this.knobControl1.Value = 0;
+            this.knobControl1.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobControl1_ValueChanged);
             // 
             // button2
             // 
@@ -421,170 +570,22 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Posisi X =";
             // 
-            // knobteta1
-            // 
-            this.knobteta1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.knobteta1.EndAngle = 405F;
-            this.knobteta1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.knobteta1.KnobBackColor = System.Drawing.Color.White;
-            this.knobteta1.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
-            this.knobteta1.LargeChange = 5;
-            this.knobteta1.Location = new System.Drawing.Point(14, 89);
-            this.knobteta1.Maximum = 360;
-            this.knobteta1.Minimum = -360;
-            this.knobteta1.Name = "knobteta1";
-            this.knobteta1.PointerColor = System.Drawing.Color.SlateBlue;
-            this.knobteta1.ScaleColor = System.Drawing.Color.Black;
-            this.knobteta1.ScaleDivisions = 11;
-            this.knobteta1.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.knobteta1.ScaleSubDivisions = 4;
-            this.knobteta1.ShowLargeScale = true;
-            this.knobteta1.ShowSmallScale = false;
-            this.knobteta1.Size = new System.Drawing.Size(122, 122);
-            this.knobteta1.SmallChange = 1;
-            this.knobteta1.StartAngle = 135F;
-            this.knobteta1.TabIndex = 8;
-            this.knobteta1.Value = 0;
-            this.knobteta1.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobteta1_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(55, 325);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Teta 2";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(55, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 15);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Teta 1";
-            // 
-            // knobteta2
-            // 
-            this.knobteta2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.knobteta2.EndAngle = 405F;
-            this.knobteta2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.knobteta2.KnobBackColor = System.Drawing.Color.White;
-            this.knobteta2.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
-            this.knobteta2.LargeChange = 5;
-            this.knobteta2.Location = new System.Drawing.Point(13, 217);
-            this.knobteta2.Maximum = 360;
-            this.knobteta2.Minimum = -360;
-            this.knobteta2.Name = "knobteta2";
-            this.knobteta2.PointerColor = System.Drawing.Color.SlateBlue;
-            this.knobteta2.ScaleColor = System.Drawing.Color.Black;
-            this.knobteta2.ScaleDivisions = 11;
-            this.knobteta2.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.knobteta2.ScaleSubDivisions = 4;
-            this.knobteta2.ShowLargeScale = true;
-            this.knobteta2.ShowSmallScale = false;
-            this.knobteta2.Size = new System.Drawing.Size(123, 123);
-            this.knobteta2.SmallChange = 1;
-            this.knobteta2.StartAngle = 135F;
-            this.knobteta2.TabIndex = 9;
-            this.knobteta2.Value = 0;
-            this.knobteta2.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobteta2_ValueChanged);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(332, 9);
+            this.label16.Location = new System.Drawing.Point(304, 9);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(320, 22);
             this.label16.TabIndex = 13;
             this.label16.Text = "SIMULASI ROBOT PLANAR 2 DOF";
-            // 
-            // knobControl1
-            // 
-            this.knobControl1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.knobControl1.EndAngle = 405F;
-            this.knobControl1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.knobControl1.KnobBackColor = System.Drawing.Color.White;
-            this.knobControl1.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
-            this.knobControl1.LargeChange = 5;
-            this.knobControl1.Location = new System.Drawing.Point(16, 88);
-            this.knobControl1.Maximum = 7;
-            this.knobControl1.Minimum = -7;
-            this.knobControl1.Name = "knobControl1";
-            this.knobControl1.PointerColor = System.Drawing.Color.SlateBlue;
-            this.knobControl1.ScaleColor = System.Drawing.Color.Black;
-            this.knobControl1.ScaleDivisions = 15;
-            this.knobControl1.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.knobControl1.ScaleSubDivisions = 4;
-            this.knobControl1.ShowLargeScale = true;
-            this.knobControl1.ShowSmallScale = false;
-            this.knobControl1.Size = new System.Drawing.Size(123, 123);
-            this.knobControl1.SmallChange = 1;
-            this.knobControl1.StartAngle = 135F;
-            this.knobControl1.TabIndex = 16;
-            this.knobControl1.Value = 0;
-            this.knobControl1.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobControl1_ValueChanged);
-            // 
-            // knobControl2
-            // 
-            this.knobControl2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.knobControl2.EndAngle = 405F;
-            this.knobControl2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.knobControl2.KnobBackColor = System.Drawing.Color.White;
-            this.knobControl2.KnobPointerStyle = KnobControl.KnobControl.KnobPointerStyles.circle;
-            this.knobControl2.LargeChange = 5;
-            this.knobControl2.Location = new System.Drawing.Point(16, 226);
-            this.knobControl2.Maximum = 7;
-            this.knobControl2.Minimum = -7;
-            this.knobControl2.Name = "knobControl2";
-            this.knobControl2.PointerColor = System.Drawing.Color.SlateBlue;
-            this.knobControl2.ScaleColor = System.Drawing.Color.Black;
-            this.knobControl2.ScaleDivisions = 15;
-            this.knobControl2.ScaleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.knobControl2.ScaleSubDivisions = 4;
-            this.knobControl2.ShowLargeScale = true;
-            this.knobControl2.ShowSmallScale = false;
-            this.knobControl2.Size = new System.Drawing.Size(123, 123);
-            this.knobControl2.SmallChange = 1;
-            this.knobControl2.StartAngle = 135F;
-            this.knobControl2.TabIndex = 17;
-            this.knobControl2.Value = 0;
-            this.knobControl2.ValueChanged += new KnobControl.ValueChangedEventHandler(this.knobControl2_ValueChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label9.Location = new System.Drawing.Point(50, 196);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 15);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Posisi X";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(50, 334);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 15);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Posisi Y";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(898, 503);
+            this.ClientSize = new System.Drawing.Size(873, 564);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox3);

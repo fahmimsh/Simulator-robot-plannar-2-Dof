@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 /*Program by:fahmi mashuri
   source : https://github.com/fahmimsh/Simulator-robot-plannar-2-Dof
   created time : 24/11/2020 */
@@ -35,14 +36,31 @@ namespace Simulator_robot_planar_2_DoF
         /*---------------------------INVERS KINEMATIKA------------------------*/
         private void Hitungansudut()
         {
-            if (x2_inv == 0) x2_inv = 0.00000000000001;
-            rad2 = Math.Acos(((x2_inv * x2_inv) + (y2_inv * y2_inv) - (L1 * L1) - (L2 * L2)) / (2 * L1 * L2));
-            rad1 = Math.Atan2(y2_inv, x2_inv) - Math.Atan2((L2 * Math.Sin(rad2)), (L1 + (L2 * Math.Cos(rad2))));
-            inv_Teta1 = rad1 * 180 / Math.PI;
-            inv_Teta2 = rad2 * 180 / Math.PI;
+            if (Math.Sqrt(Math.Pow(x2_inv, 2) + Math.Pow(y2_inv, 2)) > L1 + L2)
+            {
+                MessageBox.Show("Turunkan Nilai Posisi X atau Y !!!", "Batas Maksimum nilai");
+            }
+            else if (Math.Sqrt(Math.Pow(x2_inv, 2) + Math.Pow(y2_inv, 2)) < (L1 - L2))
+            {
+                MessageBox.Show("Naikkan Nilai Posisi X atau Y !!!", "BATAS MINIMUM LENGAN");
+            }
+            else 
+            {
+                if (x2_inv == 0) x2_inv = 0.00000000000001;
+                rad2 = Math.Acos(((x2_inv * x2_inv) + (y2_inv * y2_inv) - (L1 * L1) - (L2 * L2)) / (2 * L1 * L2));
+                rad1 = Math.Atan2(y2_inv, x2_inv) - Math.Atan2((L2 * Math.Sin(rad2)), (L1 + (L2 * Math.Cos(rad2))));
+                inv_Teta1 = rad1 * 180 / Math.PI;
+                inv_Teta2 = rad2 * 180 / Math.PI;
 
-            x1_inv = L1 * Math.Cos(inv_Teta1 * Math.PI / 180); 
-            y1_inv = L1 * Math.Sin(inv_Teta1 * Math.PI / 180);  
+                x1_inv = L1 * Math.Cos(inv_Teta1 * Math.PI / 180);
+                y1_inv = L1 * Math.Sin(inv_Teta1 * Math.PI / 180);
+
+                textBox3.Text = Math.Round((decimal)inv_Teta1, 1).ToString();
+                textBox4.Text = Math.Round((decimal)inv_Teta2, 1).ToString();
+
+                double[] value2 = { x1_inv, y1_inv, x2_inv, y2_inv };
+                drawArm(0, 1, value2);
+            }
         }
         /*---------------------------INPUT NILAI------------------------*/
         private void button1_Click(object sender, EventArgs e)
@@ -50,8 +68,6 @@ namespace Simulator_robot_planar_2_DoF
             hitungEoe();
             textBox1.Text = Math.Round((decimal)x2, 2).ToString();
             textBox2.Text = Math.Round((decimal)y2, 2).ToString();
-            knobControl1.Value = Convert.ToInt32(x2);
-            knobControl2.Value = Convert.ToInt32(y2);
 
             double[] data1 = { x1, y1, x2, y2 };
             drawArm(0, 1, data1);
@@ -100,13 +116,6 @@ namespace Simulator_robot_planar_2_DoF
             parsing3 = double.TryParse(in_X, out x2_inv);
             if (parsing3){
                 Console.WriteLine(x2_inv);
-                if (Math.Sqrt(Math.Pow(x2_inv, 2) + Math.Pow(y2_inv, 2)) > L1 + L2){
-                    MessageBox.Show("TURUNKAN NILAI POSISI X!!!", "Batas Maksimum nilai");
-                    x2_inv = 8;
-                } else if (Math.Sqrt(Math.Pow(x2_inv, 2) + Math.Pow(y2_inv, 2)) < (L1 - L2)){
-                    MessageBox.Show("Panjang lengan tidak mencapai posisi yang dimasukkan", "BATAS MINIMUM LENGAN");
-                    x2_inv = 8;
-                }
             } else{
                 Console.WriteLine("Masukkan input nilai PosisiX");
             } Console.ReadLine();
@@ -117,13 +126,6 @@ namespace Simulator_robot_planar_2_DoF
             parsing4 = double.TryParse(in_Y, out y2_inv);
             if (parsing4){
                 Console.WriteLine(y2_inv);
-                if (Math.Sqrt(Math.Pow(x2_inv, 2) + Math.Pow(y2_inv, 2)) > L1 + L2){
-                    MessageBox.Show("TURUNKAN NILAI POSISI Y!!", "Batas maksimum nilai");
-                    y2_inv = 0;
-                } else if (Math.Sqrt(Math.Pow(x2_inv, 2) + Math.Pow(y2_inv, 2)) < (L1 - L2)){
-                    MessageBox.Show("Panjang lengan tidak mencapai posisi yang dimasukkan", "BATAS MINIMUM LENGAN");
-                    y2_inv = 0;
-                }
             }
             else{
                 Console.WriteLine("Masukkan input nilai PosisiY");
@@ -132,13 +134,6 @@ namespace Simulator_robot_planar_2_DoF
         private void button2_Click(object sender, EventArgs e)
         {
             Hitungansudut();
-            textBox3.Text = Math.Round((decimal)inv_Teta1, 1).ToString();
-            textBox4.Text = Math.Round((decimal)inv_Teta2, 1).ToString();
-            knobteta1.Value = Convert.ToInt32(inv_Teta1);
-            knobteta2.Value = Convert.ToInt32(inv_Teta2);
-
-            double[] value2 = { x1_inv, y1_inv, x2_inv, y2_inv };
-            drawArm(0, 1, value2);
         }
         private void knobControl1_ValueChanged(object Sender)
         {
@@ -192,5 +187,37 @@ namespace Simulator_robot_planar_2_DoF
                 tampilan(); 
             }
         }
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics l = e.Graphics;
+            Pen p = new Pen(Color.Red, 3);
+            ChartArea ca = chart1.ChartAreas[0];
+            Axis ax = ca.AxisX;
+            Axis ay = ca.AxisY;
+            Series s = chart1.Series[0];
+            DataPoint dpCenter = s.Points[0];
+
+            double xVal = dpCenter.XValue;
+            double yVal = dpCenter.YValues[0];
+
+            double rad1 = L1 + L2;
+            double rad2 = L1 - L2;
+
+            float xRad1 = (float)(ax.ValueToPixelPosition(0) - ax.ValueToPixelPosition(rad1));
+            float yRad1 = (float)(ay.ValueToPixelPosition(0) - ay.ValueToPixelPosition(rad1));
+
+            float xRad2 = (float)(ax.ValueToPixelPosition(0) - ax.ValueToPixelPosition(rad2));
+            float yRad2 = (float)(ay.ValueToPixelPosition(0) - ay.ValueToPixelPosition(rad2));
+
+            float xc = (float)ax.ValueToPixelPosition(xVal);
+            float yc = (float)ay.ValueToPixelPosition(yVal);
+
+            Rectangle r1 = Rectangle.Round(new RectangleF(xc - xRad1, yc - yRad1, xRad1 * 2, yRad1 * 2));
+            Rectangle r2 = Rectangle.Round(new RectangleF(xc - xRad2, yc - yRad2, xRad2 * 2, yRad2 * 2));
+
+            l.DrawEllipse(p, r1);
+            l.DrawEllipse(p, r2);
+        }
     }
 }
+//knobteta1.Value = Convert.ToInt32(inv_Teta1);
