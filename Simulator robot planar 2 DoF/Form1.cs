@@ -190,7 +190,7 @@ namespace Simulator_robot_planar_2_DoF
         private void Form_Paint(object sender, PaintEventArgs e)
         {
             Graphics l = e.Graphics;
-            Pen p = new Pen(Color.Red, 3);
+            Pen p = new Pen(Color.Red, 2);
             ChartArea ca = chart1.ChartAreas[0];
             Axis ax = ca.AxisX;
             Axis ay = ca.AxisY;
